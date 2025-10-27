@@ -1,0 +1,17 @@
+Bean -> bean is just a java object that Spring manages for you
+
+Spring Container (IoC Container):-
+    is the brain of Spring. it's responsible for :
+        -> Creating all beans
+        -> injecting their dependencies
+        -> managing their lifecycle
+
+Inversion of Control (IoC)
+    Normally, your code controls when and how objects are created.
+    With Spring, you give up that control — Spring takes over and creates
+    objects for you.
+
+ApplicationContext;-
+    This is the main Spring container implementation.
+    It knows every bean, manages them, and resolves dependencies.
+

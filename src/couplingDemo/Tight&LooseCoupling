@@ -1,0 +1,87 @@
+1. Tight Coupling:
+    Definition: Tight coupling occurs when classes or modules are highly dependent
+         on each other, often directly referencing concrete implementations of other
+         classes.
+
+    Characteristics:
+        1.Changes in one class frequently necessitate changes in other dependent classes.
+        2.Reduced flexibility and maintainability.
+        3.Difficult to reuse classes in different contexts due to strong dependencies.
+        4.Challenges in unit testing, as classes cannot easily be tested in isolation.
+
+Example:
+
+    class Engine {
+        public void start() {
+            System.out.println("Engine started.");
+        }
+    }
+
+    class Car {
+        private Engine engine; // Direct dependency on a concrete Engine class
+
+        public Car() {
+            this.engine = new Engine(); // Car creates its own Engine
+        }
+
+        public void drive() {
+            engine.start();
+            System.out.println("Car is driving.");
+        }
+    }
+
+In this example, Car is tightly coupled to Engine because it directly instantiates
+Engine and depends on its concrete implementation. If Engine changes significantly,
+Car might also require modifications.
+
+
+
+2. Loose Coupling:
+    Definition: Loose coupling implies that classes or modules are relatively
+        independent and interact through abstractions like interfaces or abstract
+        classes, reducing direct dependencies on concrete implementations.
+
+    Characteristics:
+        Changes in one class are less likely to impact other classes.
+        Enhanced flexibility and maintainability.
+        Promotes reusability, as classes are designed to be more independent.
+        Facilitates unit testing by allowing the use of mock or stub implementations for dependencies.
+
+Example:
+
+    interface VehicleEngine {
+        void start();
+    }
+
+    class CarEngine implements VehicleEngine {
+        @Override
+        public void start() {
+            System.out.println("Car engine started.");
+        }
+    }
+
+    class BikeEngine implements VehicleEngine {
+        @Override
+        public void start() {
+            System.out.println("Bike engine started.");
+        }
+    }
+
+    class Vehicle {
+        private VehicleEngine engine; // Dependency on an interface
+
+        public Vehicle(VehicleEngine engine) { // Engine is injected
+            this.engine = engine;
+        }
+
+        public void startDriving() {
+            engine.start();
+            System.out.println("Vehicle is driving.");
+        }
+    }
+
+Here, Vehicle is loosely coupled to the engine implementation because it depends on
+ the VehicleEngine interface, not a specific engine class. Any class implementing
+ VehicleEngine can be injected into Vehicle, making it more flexible and easier to
+ change or test different engine types. This is often achieved through Dependency
+ Injection.

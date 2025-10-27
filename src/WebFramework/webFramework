@@ -1,0 +1,33 @@
+Problems Without a Framework
+Imagine building a web app from scratch (HTTP, routing, sessions, JSON, etc.):
+
+    -> Handle incoming HTTP requests manually
+    -> Parse query parameters
+    -> Manage responses (status codes, headers)
+    -> Maintain sessions or cookies
+    -> Error handling and logging
+    -> Connect to databases
+
+    -> Validate and sanitize user input
+    -> Implement authentication and authorization
+    -> Manage static files (CSS, JS, images)
+    -> Handle cross-origin requests (CORS)
+    -> Deal with middleware and request pipelines
+    -> Scale and structure large applications
+    -> Manage environment configurations (dev, test, prod)
+    -> Write repetitive boilerplate code for each new route
+    -> Handle security vulnerabilities (SQL injection, XSS, CSRF, etc.)
+
+
+Why Use a Web Framework?
+
+    -> Reduces boilerplate code
+    -> Provides Structured architecture
+    -> handles common tasks automatically
+makes app more maintainable, testable,scalable
+
+
+Benefits of Spring
+ -> Loose Coupling
+ -> Boilerplate code
+ -> Maintainability & Scalable
