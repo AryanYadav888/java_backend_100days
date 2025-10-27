@@ -135,11 +135,12 @@
 
 ## 📁 Example Project Structure
 src/
-└── main/
-├── java/
-│ └── com/example/...
-└── resources/
-└── application-context.xml
+ └── main/
+      ├── java/
+      │    └── com/example/...
+      └── resources/
+           └── application-context.xml
+
 
 
 ## Resources
