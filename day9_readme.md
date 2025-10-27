@@ -134,4 +134,15 @@
 - Spring’s IoC container helps manage objects and dependencies.
 
 ## 📁 Example Project Structure
+src/
+└── main/
+├── java/
+│ └── com/example/...
+└── resources/
+└── application-context.xml
+
+
+## Resources
+
+- Spring Documentation: https://spring.io/projects/spring-framework
 
